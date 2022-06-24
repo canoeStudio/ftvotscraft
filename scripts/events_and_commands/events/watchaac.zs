@@ -17,10 +17,11 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent){
 events.onCommand(function(event as CommandEvent){  
     if(event.commandSender instanceof IPlayer){  
         var player as IPlayer = event.commandSender;  
-        if(player.hasGameStage("creative") || player.name == "Lonelywjx || Lonelyxiya"){
-            return ; 
-
-        if (!event.commandSender.world.remote && event.command.name == "ftbquests" ) return; 
+        if(player.hasGameStage("creative") || player.name == "Lonelyxiya"){
+            return ;  
+        if (!event.commandSender.world.remote && event.command.name == "ftbquests" ) return;
+        
+        if (!event.commandSender.world.remote && event.command.name == "tp" ) return;  
         }
         if(!event.commandSender.world.remote){ 
             event.cancel();  
